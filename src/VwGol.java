@@ -3,12 +3,11 @@ public class VwGol {
     int anoFabricao;
     String cor;
     int qtdePortas;
-
     boolean ligado = false;
 
-    public static void montar() {
+    public static VwGol montar() {
         // Contexto static pertence a classe e não ao objeto
-        System.out.println("Montado");
+        return new VwGol();
     }
 
     public void ligar() {
