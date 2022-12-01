@@ -7,9 +7,19 @@ public class VwGol {
     int qtdePortas;
     boolean ligado = false;
 
+    //Mesmo sem que seja escrito o código desse construtor o Java cria quando não há outro
+    public VwGol() {
+    }
+
+    public VwGol(int anoFabricao, String cor, int qtdePortas) {
+        this.anoFabricao = anoFabricao;
+        this.cor = cor;
+        this.qtdePortas = qtdePortas;
+    }
+
     public static VwGol montar() {
         // Contexto static pertence a classe e não ao objeto
-        return new VwGol();
+        return new VwGol(2022, "Preto", 5);
     }
 
     public void ligar() {
