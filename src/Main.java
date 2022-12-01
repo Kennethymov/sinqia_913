@@ -8,7 +8,8 @@ public class Main {
         VwGol objetoGolCriado = VwGol.montar();
         System.out.println("Criado um novo objeto do tipo VwGol");
 
-        VwGol golDoDiego = VwGol.montar();;
+        VwGol golDoDiego = VwGol.montar();
+        ;
         golDoDiego.anoFabricao = 2022;
         golDoDiego.cor = "Preto";
         golDoDiego.qtdePortas = 5;
@@ -16,7 +17,8 @@ public class Main {
         mudarCor(golDoDiego);
         System.out.println("A cor do gol do Diego é: " + golDoDiego.cor);
 
-        VwGol golDoVitor = VwGol.montar();;
+        VwGol golDoVitor = VwGol.montar();
+        ;
         golDoVitor.anoFabricao = 2021;
         golDoVitor.cor = "Branca";
         golDoVitor.qtdePortas = 3;
@@ -34,6 +36,13 @@ public class Main {
         Aluno arthur = Aluno.matricular("Arthur", "Dev_makers_2");
         arthur.assistirAula("Banco de dados");
 
+        Aluno diego = Aluno.matricular("Diego", "Dev_makers_2");
+        diego.assistirAula("POO-1");
+        diego.realizarAtividade("POO-1", "Trabalho-1");
+
+        Professor william = Professor.contratar("William", 1.0);
+        william.ministrarAula("Dev_makers_2", "POO-1");
+        william.corrirgirAtividade("Dev_makers_2", "POO-1", "Trabalho-1");
 
         // método representam as ações possíveis de um objeto
         // atributos representam as propriedades dos objetos
