@@ -11,11 +11,16 @@ public class Aluno {
 
     ArrayList<String> atividades = new ArrayList<>();
 
+    // Método contrutor
+    // Não precisa declarar retorno. Deve possuir o mesmo nome que a classe
+    public Aluno(String nome, String curso) {
+        this.nome = nome;
+        this.curso = curso;
+    }
+
     public static Aluno matricular(String nome, String curso) {
-        Aluno aluno = new Aluno();
+        Aluno aluno = new Aluno(nome, curso);
         aluno.numeroMatricula = UUID.randomUUID().toString();
-        aluno.nome = nome;
-        aluno.curso = curso;
         return aluno;
     }
 

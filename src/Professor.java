@@ -1,4 +1,6 @@
+import java.awt.*;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
 
@@ -10,7 +12,7 @@ public class Professor {
 
     Double valorHoraAula;
 
-    ArrayList<String> diciplinas = new ArrayList<>();
+    ArrayList<String> disciplinas = new ArrayList<>();
 
     ArrayList<String> turmas = new ArrayList<>();
 

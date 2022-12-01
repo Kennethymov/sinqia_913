@@ -1,5 +1,7 @@
 public class VwGol {
 
+    public static int numeroDoProjeto = 54;
+
     int anoFabricao;
     String cor;
     int qtdePortas;

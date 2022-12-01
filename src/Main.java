@@ -18,7 +18,6 @@ public class Main {
         System.out.println("A cor do gol do Diego é: " + golDoDiego.cor);
 
         VwGol golDoVitor = VwGol.montar();
-        ;
         golDoVitor.anoFabricao = 2021;
         golDoVitor.cor = "Branca";
         golDoVitor.qtdePortas = 3;
