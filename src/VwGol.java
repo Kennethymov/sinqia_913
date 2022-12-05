@@ -18,9 +18,7 @@ public class VwGol {
     }
 
     public VwGol(int anoFabricao, String cor, int qtdePortas, boolean arCondicionado) {
-        this.anoFabricao = anoFabricao;
-        this.cor = cor;
-        this.qtdePortas = qtdePortas;
+        this(anoFabricao, cor, qtdePortas);
         this.arCondicionado = arCondicionado;
     }
 
