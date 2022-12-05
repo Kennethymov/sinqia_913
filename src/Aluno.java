@@ -15,13 +15,17 @@ public class Aluno {
     // Não precisa declarar retorno. Deve possuir o mesmo nome que a classe
     public Aluno(String nome, String curso) {
         this.nome = nome;
-        this.curso = curso;
+        this.numeroMatricula = UUID.randomUUID().toString();
+        matricular(curso);
     }
 
-    public static Aluno matricular(String nome, String curso) {
-        Aluno aluno = new Aluno(nome, curso);
-        aluno.numeroMatricula = UUID.randomUUID().toString();
-        return aluno;
+    public Aluno(String nome) {
+        this.nome = nome;
+        this.numeroMatricula = UUID.randomUUID().toString();
+    }
+
+    public void matricular(String curso) {
+        this.curso = curso;
     }
 
     public void assistirAula(String disciplina) {
