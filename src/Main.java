@@ -1,4 +1,8 @@
-import java.util.UUID;
+import docencia.Aluno;
+import docencia.Professor;
+import veiculo.VwGol;
+
+import java.util.ArrayList;
 
 public class Main {
 
@@ -12,7 +16,7 @@ public class Main {
 
         VwGol golDoVitor = new VwGol(2021, "Branca", 3, true);
         mudarCor(golDoVitor);
-        System.out.println(golDoVitor.anoFabricao);
+        System.out.println(golDoVitor.anoFabricacao);
 
         // Consigo chamar o ligar, pois o método é desse contexto.
         // Não consigo chamar o montar, pois é do contexto d class
@@ -29,9 +33,18 @@ public class Main {
         diego.assistirAula("POO-1");
         diego.realizarAtividade("POO-1", "Trabalho-1");
 
-        Professor william = Professor.contratar("William", 1.0);
+        ArrayList<String> disciplinas = new ArrayList<>();
+        disciplinas.add("POO-1");
+
+        Professor william = new Professor("William", disciplinas);
         william.ministrarAula("Dev_makers_2", "POO-1");
         william.corrirgirAtividade("Dev_makers_2", "POO-1", "Trabalho-1");
+
+        disciplinas.add("Banco de dados");
+        Professor thomas = new Professor("Thomas", disciplinas);
+
+        System.out.println("As disciplinas trabalhadas pelo William são: "+ william.disciplinas);
+        System.out.println("As disciplinas trabalhadas pelo Thomas são: "+thomas.disciplinas);
 
         // método representam as ações possíveis de um objeto
         // atributos representam as propriedades dos objetos
@@ -39,7 +52,15 @@ public class Main {
 
     public static void mudarCor(VwGol variavelDoProfessor) {
         variavelDoProfessor.cor = "Azul";
-        variavelDoProfessor.anoFabricao = 2029;
+        variavelDoProfessor.anoFabricacao = 2029;
     }
+
+    /*
+    Visibilidades
+    publica (public) - Visível a todos sem distinção. Menos restritiva
+    privada (private) - Visível apenas a quem esta na mesma class. Mais restritiva
+    protegida (protected) - Visível a quem esta na mesma classe, quem herda e quem esta no mesmo pacote.
+    pacote (package) (default) - Visível a quem esta na mesma classe e no mesmo pacote, mas não a quem herda.
+     */
 
 }

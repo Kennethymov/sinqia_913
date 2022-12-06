@@ -1,21 +1,22 @@
+package docencia;
+
 import java.util.ArrayList;
 import java.util.UUID;
 
 public class Aluno {
 
-    String nome;
+    public String nome;
 
-    String numeroMatricula;
+    public String numeroMatricula;
 
-    String curso;
+    public String curso;
 
-    ArrayList<String> atividades = new ArrayList<>();
+    public ArrayList<String> atividades = new ArrayList<>();
 
     // Método contrutor
     // Não precisa declarar retorno. Deve possuir o mesmo nome que a classe
     public Aluno(String nome, String curso) {
-        this.nome = nome;
-        this.numeroMatricula = UUID.randomUUID().toString();
+        this(nome);
         matricular(curso);
     }
 
@@ -31,6 +32,11 @@ public class Aluno {
     public void assistirAula(String disciplina) {
         System.out.println("O aluno " + nome + " assistiu a aula de " +
                 disciplina + " no curso de " + curso);
+        darAtencaoAula();
+    }
+
+    protected void darAtencaoAula() {
+        System.out.println("Muito focado aqui");
     }
 
     public void realizarAtividade(String displina, String atividade) {
