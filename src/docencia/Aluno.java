@@ -5,11 +5,11 @@ import java.util.UUID;
 
 public class Aluno {
 
-    public String nome;
+    private String nome;
 
-    public String numeroMatricula;
+    private String numeroMatricula;
 
-    public String curso;
+    private String curso;
 
     public ArrayList<String> atividades = new ArrayList<>();
 
@@ -23,6 +23,26 @@ public class Aluno {
     public Aluno(String nome) {
         this.nome = nome;
         this.numeroMatricula = UUID.randomUUID().toString();
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNumeroMatricula() {
+        return this.numeroMatricula;
+    }
+
+    public String getCurso() {
+        return this.curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
     }
 
     public void matricular(String curso) {
@@ -39,7 +59,11 @@ public class Aluno {
         System.out.println("Muito focado aqui");
     }
 
-    public void realizarAtividade(String displina, String atividade) {
+    public void receberAtividade(String disciplina, String atividade) {
+        realizarAtividade(disciplina, atividade);
+    }
+
+    protected void realizarAtividade(String displina, String atividade) {
         System.out.println("O aluno " + nome + " realizou a atividade " +
                 atividade + " na disciplina " + displina + " no curso " + curso);
     }

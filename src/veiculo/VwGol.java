@@ -4,13 +4,15 @@ public class VwGol {
 
     public static int numeroDoProjeto = 54;
 
-    public int anoFabricacao;
-    public String cor;
-    public int qtdePortas;
+    private int anoFabricacao;
 
-    public boolean arCondicionado;
+    private String cor;
 
-    public boolean ligado = false;
+    private int qtdePortas;
+
+    private boolean arCondicionado;
+
+    private boolean ligado = false;
 
     //Mesmo sem que seja escrito o código desse construtor o Java cria quando não há outro
     public VwGol(int anoFabricacao, String cor, int qtdePortas) {
@@ -21,6 +23,33 @@ public class VwGol {
 
     public VwGol(int anoFabricacao, String cor, int qtdePortas, boolean arCondicionado) {
         this(anoFabricacao, cor, qtdePortas);
+        this.arCondicionado = arCondicionado;
+    }
+
+    //get and set
+    // get -> recupera o valor
+    // set -> atribui o valor
+    public int getAnoFabricacao() {
+        return this.anoFabricacao;
+    }
+
+    public String getCor() {
+        return this.cor;
+    }
+
+    public void setCor(String cor/*novaCor*/) {
+        this.cor = cor;
+    }
+
+    public int getQtdePortas() {
+        return this.qtdePortas;
+    }
+
+    public boolean getArCondicionado() {
+        return this.arCondicionado;
+    }
+
+    public void setArCondicionado(boolean arCondicionado) {
         this.arCondicionado = arCondicionado;
     }
 

@@ -10,13 +10,13 @@ public class Main {
         //Consigo chamar o montar na classe, pois o método é desse contexto,
         // mas não consigo chamar o ligar, pois é do objeto
         VwGol golDoDiego = new VwGol(2022, "Preto", 5);
-        System.out.println("A cor do gol do Diego é: " + golDoDiego.cor);
-        mudarCor(golDoDiego);
-        System.out.println("A cor do gol do Diego é: " + golDoDiego.cor);
+        System.out.println("A cor do gol do Diego é: " + golDoDiego.getCor());
+        golDoDiego.setCor("Azul");
+        System.out.println("A cor do gol do Diego é: " + golDoDiego.getCor());
 
         VwGol golDoVitor = new VwGol(2021, "Branca", 3, true);
-        mudarCor(golDoVitor);
-        System.out.println(golDoVitor.anoFabricacao);
+        golDoVitor.setCor("Preto");
+        System.out.println(golDoVitor.getAnoFabricacao());
 
         // Consigo chamar o ligar, pois o método é desse contexto.
         // Não consigo chamar o montar, pois é do contexto d class
@@ -31,7 +31,7 @@ public class Main {
 
         Aluno diego = new Aluno("Diego", "Dev_makers_2");
         diego.assistirAula("POO-1");
-        diego.realizarAtividade("POO-1", "Trabalho-1");
+        diego.receberAtividade("POO-1", "Trabalho-1");
 
         ArrayList<String> disciplinas = new ArrayList<>();
         disciplinas.add("POO-1");
@@ -50,10 +50,6 @@ public class Main {
         // atributos representam as propriedades dos objetos
     }
 
-    public static void mudarCor(VwGol variavelDoProfessor) {
-        variavelDoProfessor.cor = "Azul";
-        variavelDoProfessor.anoFabricacao = 2029;
-    }
 
     /*
     Visibilidades
