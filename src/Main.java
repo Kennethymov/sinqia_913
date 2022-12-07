@@ -3,6 +3,7 @@ import docencia.Professor;
 import veiculo.VwGol;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 

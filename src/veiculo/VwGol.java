@@ -1,10 +1,8 @@
 package veiculo;
 
-public class VwGol {
+public class VwGol extends Veiculo {
 
     public static int numeroDoProjeto = 54;
-
-    private int anoFabricacao;
 
     private String cor;
 
@@ -29,10 +27,6 @@ public class VwGol {
     //get and set
     // get -> recupera o valor
     // set -> atribui o valor
-    public int getAnoFabricacao() {
-        return this.anoFabricacao;
-    }
-
     public String getCor() {
         return this.cor;
     }
