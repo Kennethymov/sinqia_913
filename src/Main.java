@@ -1,9 +1,9 @@
 import docencia.Aluno;
 import docencia.Professor;
-import veiculo.VwGol;
+import veiculo.carro.HB20;
+import veiculo.carro.VwGol;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Main {
 
@@ -18,6 +18,9 @@ public class Main {
         VwGol golDoVitor = new VwGol(2021, "Branca", 3, true);
         golDoVitor.setCor("Preto");
         System.out.println(golDoVitor.getAnoFabricacao());
+
+        HB20 b20DoPssor = new HB20(2022, "Preto", 5, true);
+        System.out.println("B20tão do pssor esta ligado: "+b20DoPssor.getLigado());
 
         // Consigo chamar o ligar, pois o método é desse contexto.
         // Não consigo chamar o montar, pois é do contexto d class
