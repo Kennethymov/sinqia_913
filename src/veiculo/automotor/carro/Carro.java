@@ -1,8 +1,9 @@
-package veiculo.carro;
+package veiculo.automotor.carro;
 
 import veiculo.Veiculo;
+import veiculo.automotor.VeiculoAutomotor;
 
-public class Carro extends Veiculo {
+public class Carro extends VeiculoAutomotor {
 
     private int qtdePortas;
     private boolean arCondicionado;
@@ -33,6 +34,10 @@ public class Carro extends Veiculo {
 
     public boolean getLigado() {
         return ligado;
+    }
+
+    public void ligar() {
+        this.ligado = true;
     }
 
 }

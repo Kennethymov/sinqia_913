@@ -1,5 +1,8 @@
 package docencia;
 
+import veiculo.automotor.VeiculoAutomotor;
+import veiculo.automotor.carro.Carro;
+
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -11,7 +14,7 @@ public class Professor {
 
     public Double valorHoraAula;
 
-    public ArrayList<String> disciplinas = new ArrayList<>();
+    public ArrayList<String> disciplinas;
 
     public ArrayList<String> turmas = new ArrayList<>();
 
@@ -40,6 +43,11 @@ public class Professor {
     public void corrirgirAtividade(String turma, String disciplina, String atividade) {
         System.out.println("O professor " + nome + " corrigiu o atividade " +
                 atividade + " da turma " + turma + " e disciplina " + disciplina);
+    }
+
+    public void comprarCarro(VeiculoAutomotor veiculo) {
+        System.out.println("Parabéns prof. Você comprou o seu carro.");
+        veiculo.ligar();
     }
 
 }

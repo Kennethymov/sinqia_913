@@ -1,6 +1,4 @@
-package veiculo.carro;
-
-import veiculo.Veiculo;
+package veiculo.automotor.carro;
 
 public class HB20 extends Carro {
 

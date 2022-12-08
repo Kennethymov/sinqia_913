@@ -1,7 +1,8 @@
 import docencia.Aluno;
 import docencia.Professor;
-import veiculo.carro.HB20;
-import veiculo.carro.VwGol;
+import veiculo.automotor.carro.HB20;
+import veiculo.automotor.carro.VwGol;
+import veiculo.automotor.motocicleta.Motoquinha;
 
 import java.util.ArrayList;
 
@@ -18,6 +19,9 @@ public class Main {
         VwGol golDoVitor = new VwGol(2021, "Branca", 3, true);
         golDoVitor.setCor("Preto");
         System.out.println(golDoVitor.getAnoFabricacao());
+
+        VwGol veiculoDoLucas = new VwGol(2022, "Verde", 3, true);
+        veiculoDoLucas.desligar();
 
         HB20 b20DoPssor = new HB20(2022, "Preto", 5, true);
         System.out.println("B20tão do pssor esta ligado: "+b20DoPssor.getLigado());
@@ -43,6 +47,7 @@ public class Main {
         Professor william = new Professor("William", disciplinas);
         william.ministrarAula("Dev_makers_2", "POO-1");
         william.corrirgirAtividade("Dev_makers_2", "POO-1", "Trabalho-1");
+        william.comprarCarro(b20DoPssor);
 
         disciplinas.add("Banco de dados");
         Professor thomas = new Professor("Thomas", disciplinas);
@@ -53,7 +58,6 @@ public class Main {
         // método representam as ações possíveis de um objeto
         // atributos representam as propriedades dos objetos
     }
-
 
     /*
     Visibilidades
