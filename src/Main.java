@@ -1,10 +1,15 @@
 import docencia.Aluno;
+import docencia.AlunoPCD;
+import docencia.Pessoa;
 import docencia.Professor;
+import veiculo.Veiculo;
 import veiculo.automotor.carro.HB20;
 import veiculo.automotor.carro.VwGol;
 import veiculo.automotor.motocicleta.Motoquinha;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
@@ -24,7 +29,7 @@ public class Main {
         veiculoDoLucas.desligar();
 
         HB20 b20DoPssor = new HB20(2022, "Preto", 5, true);
-        System.out.println("B20tão do pssor esta ligado: "+b20DoPssor.getLigado());
+        System.out.println("B20tão do pssor esta ligado: " + b20DoPssor.getLigado());
 
         // Consigo chamar o ligar, pois o método é desse contexto.
         // Não consigo chamar o montar, pois é do contexto d class
@@ -41,6 +46,9 @@ public class Main {
         diego.assistirAula("POO-1");
         diego.receberAtividade("POO-1", "Trabalho-1");
 
+        Aluno cadastrado = cadastrarAluno();
+        System.out.println("Foi cadastrado o aluno: " + cadastrado.getNome());
+
         ArrayList<String> disciplinas = new ArrayList<>();
         disciplinas.add("POO-1");
 
@@ -52,8 +60,8 @@ public class Main {
         disciplinas.add("Banco de dados");
         Professor thomas = new Professor("Thomas", disciplinas);
 
-        System.out.println("As disciplinas trabalhadas pelo William são: "+ william.disciplinas);
-        System.out.println("As disciplinas trabalhadas pelo Thomas são: "+thomas.disciplinas);
+        System.out.println("As disciplinas trabalhadas pelo William são: " + william.disciplinas);
+        System.out.println("As disciplinas trabalhadas pelo Thomas são: " + thomas.disciplinas);
 
         // método representam as ações possíveis de um objeto
         // atributos representam as propriedades dos objetos
@@ -66,5 +74,22 @@ public class Main {
     protegida (protected) - Visível a quem esta na mesma classe, quem herda e quem esta no mesmo pacote.
     pacote (package) (default) - Visível a quem esta na mesma classe e no mesmo pacote, mas não a quem herda.
      */
+
+    public static Aluno cadastrarAluno() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Informe o nome:");
+        String nome = scanner.nextLine();
+        System.out.println("O aluno tem alguma deficiência? (s/n)");
+        String deficiencia = scanner.nextLine();
+        if (deficiencia.equalsIgnoreCase("s")) {
+            System.out.println("Informe qual a deficiência:");
+            deficiencia = scanner.nextLine();
+            AlunoPCD alunoPCD = new AlunoPCD(nome, "POO-1");
+            alunoPCD.setDeficiencia(deficiencia);
+            return alunoPCD;
+        } else {
+            return new Aluno(nome, "POO-1");
+        }
+    }
 
 }
