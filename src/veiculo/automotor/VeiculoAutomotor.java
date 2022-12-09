@@ -1,7 +1,6 @@
 package veiculo.automotor;
 
 import veiculo.Veiculo;
-import veiculo.automotor.carro.Carro;
 
 public abstract class VeiculoAutomotor extends Veiculo {
 

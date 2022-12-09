@@ -46,8 +46,8 @@ public class Main {
         diego.assistirAula("POO-1");
         diego.receberAtividade("POO-1", "Trabalho-1");
 
-        Aluno cadastrado = cadastrarAluno();
-        System.out.println("Foi cadastrado o aluno: " + cadastrado.getNome());
+//        Aluno cadastrado = cadastrarAluno();
+//        System.out.println("Foi cadastrado o aluno: " + cadastrado.getNome());
 
         ArrayList<String> disciplinas = new ArrayList<>();
         disciplinas.add("POO-1");
