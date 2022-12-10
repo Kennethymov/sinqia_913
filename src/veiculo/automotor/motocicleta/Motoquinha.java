@@ -26,4 +26,8 @@ public class Motoquinha extends VeiculoAutomotor {
         System.out.println("Não caia, continue a acelerar");
     }
 
+    public void mover(int aumentoDeVelocidade) {
+        System.out.println("Velocidade aumentada em: "+aumentoDeVelocidade);
+    }
+
 }

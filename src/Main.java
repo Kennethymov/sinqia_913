@@ -57,6 +57,9 @@ public class Main {
         william.corrirgirAtividade("Dev_makers_2", "POO-1", "Trabalho-1");
         william.comprarCarro(b20DoPssor);
 
+        Motoquinha motoca = new Motoquinha(2022, "Verde");
+        motoca.mover(50);
+
         disciplinas.add("Banco de dados");
         Professor thomas = new Professor("Thomas", disciplinas);
 
