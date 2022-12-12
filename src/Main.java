@@ -1,16 +1,14 @@
 import docencia.Aluno;
 import docencia.AlunoPCD;
-import docencia.Pessoa;
 import docencia.Professor;
-import veiculo.Veiculo;
-import veiculo.automotor.aeros.Aviao;
+import veiculo.automotor.aeros.ERJ45;
 import veiculo.automotor.carro.HB20;
 import veiculo.automotor.carro.VwGol;
 import veiculo.automotor.motocicleta.Motoquinha;
 import veiculo.automotor.motores.Motor;
+import veiculo.automotor.motores.MotorCombustao;
 import veiculo.automotor.motores.MotorReacao;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -40,9 +38,9 @@ public class Main {
         golDoDiego.ligar();
         System.out.println("Gol do Diego ligado");
 
-        Motor motor1 = new MotorReacao();
+        MotorReacao motor1 = new MotorReacao();
 
-        Aviao aviao = new Aviao(
+        ERJ45 aviao = new ERJ45(
                 2020,
                 "Branca",
                 72,

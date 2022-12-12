@@ -2,14 +2,15 @@ package veiculo.automotor.aeros;
 
 import veiculo.automotor.VeiculoAutomotor;
 import veiculo.automotor.motores.Motor;
+import veiculo.automotor.motores.MotorReacao;
 
 import java.util.List;
 
-public class Aviao extends VeiculoAutomotor {
+public class ERJ45 extends VeiculoAutomotor {
 
     private int qtdePassageiros;
 
-    private List<Motor> motores;
+    private List<MotorReacao> motores;
     private boolean tripulado;
     private float peso;
 
@@ -19,11 +20,11 @@ public class Aviao extends VeiculoAutomotor {
 
     private boolean emVoo = false;
 
-    public Aviao(
+    public ERJ45(
             int anoFabricacao,
             String cor,
             int qtdePassageiros,
-            List<Motor> motores,
+            List<MotorReacao> motores,
             boolean tripulado,
             float peso,
             String modelo,
@@ -46,7 +47,7 @@ public class Aviao extends VeiculoAutomotor {
         return qtdePassageiros;
     }
 
-    public List<Motor> getQtdeMotores() {
+    public List<MotorReacao> getQtdeMotores() {
         return this.motores;
     }
 
