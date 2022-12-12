@@ -1,5 +1,7 @@
 package docencia;
 
+import veiculo.automotor.VeiculoAutomotor;
+
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -56,6 +58,13 @@ public class Aluno extends Pessoa {
     protected void realizarAtividade(String displina, String atividade) {
         System.out.println("O aluno " + getNome() + " realizou a atividade " +
                 atividade + " na disciplina " + displina + " no curso " + curso);
+    }
+
+    public void comprarVeiculo(VeiculoAutomotor veiculo) {
+        System.out.println("Parabéns");
+        veiculo.ligar();
+        veiculo.mover();
+        veiculo.desligar();
     }
 
 }

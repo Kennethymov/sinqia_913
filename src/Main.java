@@ -3,12 +3,16 @@ import docencia.AlunoPCD;
 import docencia.Pessoa;
 import docencia.Professor;
 import veiculo.Veiculo;
+import veiculo.automotor.aeros.Aviao;
 import veiculo.automotor.carro.HB20;
 import veiculo.automotor.carro.VwGol;
 import veiculo.automotor.motocicleta.Motoquinha;
+import veiculo.automotor.motores.Motor;
+import veiculo.automotor.motores.MotorReacao;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -36,8 +40,22 @@ public class Main {
         golDoDiego.ligar();
         System.out.println("Gol do Diego ligado");
 
+        Motor motor1 = new MotorReacao();
+
+        Aviao aviao = new Aviao(
+                2020,
+                "Branca",
+                72,
+                Arrays.asList(motor1),
+                true,
+                15611.1569f,
+                "ATR 72",
+                "Embraer"
+        );
+
         Aluno richard = new Aluno("Richard", "Dev_makers_2");
         richard.assistirAula("POO-1");
+        richard.comprarVeiculo(aviao);
 
         Aluno arthur = new Aluno("Arthur", "Dev_makers_2");
         arthur.assistirAula("Banco de dados");
